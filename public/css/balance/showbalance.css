@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl; /* توجيه النصوص لليمين */
+    text-align: right;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+}
+
+.table {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

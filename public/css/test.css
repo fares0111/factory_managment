@@ -1,0 +1,50 @@
+body{
+
+background-color: black;
+
+color: antiquewhite;
+}
+
+.first label{
+
+margin-top: 30px;
+margin-bottom: 25px;
+display: inline-block;
+margin-left:20px ;
+
+}
+
+.second label{
+
+    margin-bottom: 25px;
+    display: inline-block;
+    margin-left:20px ;
+    
+    
+    }
+    .third label{
+
+        margin-bottom: 25px;
+        display: inline-block;
+        margin-left:20px ;
+        
+        
+        }
+
+        .finisd label{
+
+            margin-bottom: 25px;
+            display: inline-block;
+            margin-left:20px ;
+            
+            
+}
+
+.create{
+
+padding: 10px;
+background-color: aquamarine;
+
+font-size: 20px;
+}
+       

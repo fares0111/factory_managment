@@ -1,0 +1,76 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation Styles */
+.main-nav {
+    background-color: #333; /* لون الخلفية */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* توسيط الأزرار أفقيًا */
+}
+
+.nav-item {
+    margin-right: 10px; /* تقليل المسافة بين الأزرار */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 20px; /* زيادة المسافة بين النص والحواف */
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 10px; /* جعل الحواف مستديرة */
+    background-color: #6195cc; /* لون الخلفية */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item a:hover {
+    background-color: #0056b3; /* تغيير لون الخلفية عند التحويم */
+}
+
+/* Company Info Styles */
+.company-info {
+    background-color: #f9f9f9; /* لون خلفية معلومات الشركة */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.company-details p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333; /* لون النص */
+}
+
+.company-name {
+    font-weight: bold;
+    color: #333; /* لون النص */
+}
+
+.company-phone {
+    color: #007bff; /* لون الرقم */
+}
+
+.company-owner {
+    font-style: italic;
+    color: #555; /* لون النص */
+}

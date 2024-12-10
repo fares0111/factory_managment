@@ -1,0 +1,37 @@
+.edit-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="number"],
+.edit-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.edit-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}

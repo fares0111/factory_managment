@@ -1,0 +1,65 @@
+/* AddREcite.css */
+
+/* تنسيق لحقول الإدخال */
+input[type="text"],
+input[type="number"],
+select {
+    width: 200px; /* قيمة ثابتة للعرض */
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* إضافة حدود */
+    border-radius: 4px; /* إضافة زوايا مستديرة */
+    background-color: #f8f8f8; /* لون خلفية */
+}
+
+/* تنسيق عند التركيز */
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #4CAF50; /* لون الحدود عند التركيز */
+}
+
+/* تنسيق لزر الإرسال */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* تنسيق للجدول */
+.table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+/* تنسيق لعنوان الجدول */
+.table th {
+    background-color: #f2f2f2;
+    text-align: right;
+    padding: 10px;
+}
+
+/* تنسيق لبيانات الجدول */
+.table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* تنسيق لروابط الجدول */
+.table a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* تنسيق لروابط الجدول عند التحويم */
+.table a:hover {
+    text-decoration: underline;
+}
