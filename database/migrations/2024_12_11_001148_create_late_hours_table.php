@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('late_hours', function (Blueprint $table) {
             $table->id();
+            $table ->integer("clint_id");
+
             $table->string("number");
             $table->timestamps();
         });

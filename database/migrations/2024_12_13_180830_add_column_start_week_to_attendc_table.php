@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('over_hours', function (Blueprint $table) {
-            $table->id();
-            $table->string("number");
-            $table ->integer("clint_id");
-            $table->timestamps();
+        Schema::table('attendc', function (Blueprint $table) {
+
+$table->time("start_week");
+
         });
     }
 
@@ -28,6 +27,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('over_hours');
+        Schema::table('attendc', function (Blueprint $table) {
+            //
+        });
     }
 };

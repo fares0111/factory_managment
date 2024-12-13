@@ -61,10 +61,10 @@ color:red;
 
 @csrf
 
-<select name="name" id="">
-
+<select name="id" id="">
+<option value="">اختار موظف</option>
 @foreach($all as $all_names)
-<option value="{{$all_names->name}}">{{$all_names->name}}</option>
+<option value="{{$all_names->id}}">{{$all_names->name}}</option>
 @endforeach
 
 </select>
