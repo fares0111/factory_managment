@@ -147,19 +147,21 @@ public function search_about_statment(request $request){
 
 $employee = new_em::where("id",$request->id)->get()->first();
 $Id = $employee->id;
-$user_late = $employee->late_time()->get();
-$user_over_time =$employee->over_time()->get();
+
+$user_attendeces = $employee->attendec()->get(); 
+
+$user_lates = $employee->late_time()->get();
+$user_over_times =$employee->over_time()->get();
  
-$Process = employees_process::where("employees_id",$Id)->get()->first();
-$Total_salary = $Process->weeks * $employee->salary ;
 $salary = $employee->salary;
+$Total_salary = count($user_attendeces) * $employee->salary ;
+
+
 
 $Price_Hour = $employee->salary /6 /$employee->hours;
-$Plus_Hours = $Process->hours * $Price_Hour;
-$Abs_Hours = $Process->abs_hours * $Price_Hour;
+$Plus_Hours = ceil($user_over_times->sum("number") * $Price_Hour);
+$Abs_Hours = ceil($user_lates->sum("number") * $Price_Hour);
 
-$Up_Hours = $Process->hours;
-$Down_Hours = $Process->abs_hours;
 
 // المسحوبات
     $with = add_new_with::where("name",$request->name)->get();
@@ -183,9 +185,12 @@ return view("employees/results",compact(
     'sumwith',
     'allabs',
     "Total_salary",
-    "Up_Hours",
-    "Down_Hours",
+    "Plus_Hours",
+    "Abs_Hours",
     "Net",
+    "user_attendeces",
+    "user_lates",
+    "user_over_times"
 
 
 ));
@@ -208,19 +213,19 @@ public function Increase_Attendec(request $request){
 
 $Id = $request->id;
 $start_week = carbon::now()->addDays(2);
-$end_week = carbon::now()->addDays(6);
-dd($start_week);
+$end_week = carbon::now()->addDays(8);
+//dd($start_week);
 
 
-\DB::table("attendc")->create([
+\DB::table("attendc")->insert([
 
- "clint_id" => $Id,
+ 'clint_id' => $Id,
+ 'start_week' => $start_week,
+ 'end_week' => $end_week,
  
     
 ]);
 
-$record->weeks +=1; 
-$record->save(); 
 
 return redirect()->back();
 

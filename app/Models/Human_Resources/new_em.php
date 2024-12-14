@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Human_Resources\late_time;
 use App\Models\Human_Resources\over_time;
+use App\Models\Human_Resources\attendec;
 
 class new_em extends Model
 {
@@ -24,6 +25,13 @@ return $this->hasMany(late_time::class,"clint_id");
     public function over_time(){
 
 return $this->hasMany(over_time::class,"clint_id");
+
+    }
+
+    public function attendec(){
+
+return $this->hasMany(attendec::class,"clint_id");
+
 
     }
 }

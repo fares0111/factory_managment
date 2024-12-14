@@ -64,8 +64,8 @@ color:black;
 الغياب {{$abs}}<br>
 خصم الغياب {{$priceabs}}<br><br>
 
-ساعات زيادة {{$Up_Hours}}<br>
-ساعات متاخرة {{$Down_Hours}}<br>
+ساعات زيادة {{$Plus_Hours}}<br>
+ساعات متاخرة {{$Abs_Hours}}<br>
 
 
 المسحوبات {{$sumwith}}<br>
@@ -134,6 +134,93 @@ $counter =1;
                     <td>{{$abs->name}}</td>                        
                     <td>{{$abs->date}}</td>
                     <td>{{ $abs->opreator }}</td>
+                    <td>{{ $counter++ }}</td>
+                    
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+
+        @php
+        $counter =1;
+        @endphp
+        <h2 class="black">ساعات زيادة</h2>
+
+<table class="table"  border="10" >
+            <thead>
+                <tr>
+                    
+                   
+                    <th scope="col">عدد الساعات</th> 
+                    <th scope="col">التاريخ</th>
+                    <th scope="col">الرقم</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($user_over_times as $user_over_time)
+                    <tr>  
+                    <td>{{$user_over_time->number}}</td>                        
+                    <td>{{$user_over_time->created_at}}</td>
+                    <td>{{ $counter++ }}</td>
+                    
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+
+        @php
+        $counter =1;
+        @endphp
+        <h2 class="black">ساعات متاخرة</h2>
+
+<table class="table"  border="10" >
+            <thead>
+                <tr>
+                    
+                   
+                    <th scope="col">عدد الساعات</th> 
+                    <th scope="col">التاريخ</th>
+                    <th scope="col">الرقم</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($user_lates as $user_late)
+                    <tr>  
+                    <td>{{$user_late->number}}</td>                        
+                    <td>{{$user_late->created_at}}</td>
+                    <td>{{ $counter++ }}</td>
+                    
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+
+        @php
+        $counter =1;
+        @endphp
+        <h2 class="black">الحضور </h2>
+
+<table class="table"  border="10" >
+            <thead>
+                <tr>
+                    
+                   
+                    <th scope="col">بداية الاسبوع </th> 
+                    <th scope="col">نهاية الاسبوع</th>
+                    <th scope="col">الرقم</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($user_attendeces as $user_attendec)
+                    <tr>  
+                    <td>{{$user_attendec->start_week}}</td>                        
+                    <td>{{$user_attendec->end_week}}</td>
                     <td>{{ $counter++ }}</td>
                     
                     </tr>
